@@ -1,0 +1,77 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="css/jquery.mobile-1.4.5.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-1.11.2.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+
+<script src="js/codigo.js"></script>
+</head> 
+<body> 
+
+<div data-role="page" id="pagPPal">
+	<div data-role="header">
+		<h1>Principal</h1>
+	</div>
+	<div data-role="content">	
+      <ul data-role"listview">
+          <li><a href="#pagConsultaEstudiantes" data-transition="pop">Consulta Estudiantes</a></li>
+          <li><a href="#pagAgregaEstudiantes" data-transition="pop">Agrega Estudiantes</a></li>
+          <li><a href="#pagEliminaEstudiantes" data-transition="pop">Eltimina Estudiantes</a></li>
+      </ul>
+     </div>
+     <div data-role="footer">
+         <h4>Pie de Pagina</h4>
+     </div>
+</div>      
+
+<div data-role="page" id="pagConsultaEstudiantes">
+	<div data-role="header">
+		<h1>Consulta Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		
+		<form action="php/consultar_estudiantes.php" id="form" method="post">
+		<label>Grupo a consultar</label>
+		<input type="text" id="txtGrupo" name="txtGrupo">
+		<input type="button" id="btnConsultar" value="consultar">
+		</form>
+		<div id="mostrarDatos">
+		  <ul data-role="listview" data-theme="a" id="listaDatos">
+		  </ul>
+		</div>
+		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pagAgregaEstudiantes">
+	<div data-role="header">
+		<h1>Agrega Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+<div data-role="page" id="pagEliminaEstudiantes">
+	<div data-role="header">
+		<h1>Elimina Estudiantes</h1>
+	</div>
+	<div data-role="content">	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+</html>
